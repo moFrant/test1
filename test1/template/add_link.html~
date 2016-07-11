@@ -1,0 +1,15 @@
+<html>
+<head>
+</head>
+<body>
+	<form method='POST'>
+	{% csrf_token %}
+	Ссылка, которую нужно сократить (например http://site.ru):<br>
+	<input type="text" name="link" size="20" maxlength="50" value="Незабудьте указать протокол">
+	<input type="submit" name="submit" value="Создать">
+	</form>
+	{% for i in list %}
+	{{ i.link_to }} <br>
+	{% endfor %}
+</body>
+</html>

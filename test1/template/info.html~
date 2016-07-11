@@ -1,0 +1,9 @@
+<html>
+<head>
+</head>
+<body>
+	Оригинальная ссылка: {{ origional_link }} <br>
+	Сокращенная ссылка: {{ link }} <br>
+	Количество переходов: {{ count }}
+</body>
+</html>

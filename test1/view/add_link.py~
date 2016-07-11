@@ -1,0 +1,15 @@
+#coding:utf8
+
+from django.shortcuts import render, redirect
+from page import models
+
+def add_link(request):
+	if request.method == 'GET':
+		return render(request, 'add_link.html')
+	elif request.method == 'POST':
+		add_link_to = request.POST.get('link')
+		link = models.Link()
+		link.link_to = add_link_to
+		link.count = 0
+		link.save()
+		return redirect('/info/'+str(link.pk))

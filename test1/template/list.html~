@@ -1,0 +1,16 @@
+<html>
+<head>
+</head>
+<body>
+	Оригинальная ссылка: {{ content.link_to }} <br>
+	Сокращенная ссылка: yodaweb.ru:8000/red/{{ content.pk }} <br>
+	Количество переходов: {{ content.count }} <br>
+	<a href='http://yodaweb.ru:8000/del/?pk={{ content.pk }}'> Удалить </a><br>
+	{% if content1.has_previous %}
+            <a href="?page={{ content1.previous_page_number }}">Предыдущая</a>
+        {% endif %}
+        {% if content1.has_next %}
+            <a href="?page={{ content1.next_page_number }}">Следующая</a>
+        {% endif %}
+</body>
+</html>
